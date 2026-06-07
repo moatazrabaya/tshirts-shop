@@ -5,7 +5,7 @@ public class MiddleEastMediumTShirt : TShirt
     public MiddleEastMediumTShirt()
     {
         Name = "Middle East Medium T-Shirt";
-        Description = "A medium T-shirt designed for the Middle East market";
+        Description = "A medium T-shirt designed for the Middle East region";
     }
     public override void FormSize()
     {

@@ -5,7 +5,7 @@ public class AsiaSmallTShirt : TShirt
     public AsiaSmallTShirt()
     {
         Name = "Asia Small T-Shirt";
-        Description = "A small T-shirt designed for the Asia market";
+        Description = "A small T-shirt designed for the Asia region";
     }
 
     public override void FormSize()
