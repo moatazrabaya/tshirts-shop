@@ -6,7 +6,13 @@ public class SalesTracker : ISubject
     private int _mediumSold = 0;
     private int _largeSold = 0;
 
+    private static SalesTracker? _instance;
+
     private List<IObserver> _observers = new();
+
+    public static SalesTracker Instance => _instance ??=new SalesTracker();
+
+    private SalesTracker() {}
 
     public void RegisterObserver(IObserver observer)
     {
