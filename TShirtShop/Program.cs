@@ -10,6 +10,8 @@ class Program
 {
     static void Main(String[] args)
     {
+        Console.Clear();
+
         SalesTracker tracker = SalesTracker.Instance;
 
         ShopOwner owner = new("Moataz");
@@ -17,20 +19,16 @@ class Program
         tracker.RegisterObserver(owner);
 
         TShirtFactory factory = new ChinaFactory();
-
         TShirt tshirt = factory.CreateMedium();
-
         tshirt = new LogoDecorator(tshirt);
-
         tshirt = new BlueColorDecorator(tshirt);
 
         Order order = Order.Instance;
-
         order.PlaceOrder(tshirt);
-
         order.ShowOrder();
-
         order.CompleteOrder();
+
+        owner.PrintReport();
 
     }
 }
