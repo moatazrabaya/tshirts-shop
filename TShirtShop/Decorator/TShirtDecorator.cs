@@ -9,6 +9,8 @@ public abstract class TShirtDecorator : TShirt
     public TShirtDecorator(TShirt tshirt)
     {
         _tshirt = tshirt;
+        Size = tshirt.Size;
+        Region = tshirt.Region;
     }
 
     public abstract override string Description {get;}

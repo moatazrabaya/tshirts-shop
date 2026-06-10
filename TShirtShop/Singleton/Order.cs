@@ -1,4 +1,5 @@
 using TShirtShop.Models;
+using TShirtShop.Observer;
 
 namespace TShirtShop.Singleton;
 
@@ -19,7 +20,7 @@ public class Order
             return;
         }
         _tshirt = tshirt;
-        System.Console.WriteLine($"Order placed: {_tshirt.FullDescription}");
+        System.Console.WriteLine($"Order placed: {_tshirt.Description}");
     }
 
     public void CompleteOrder()
@@ -29,7 +30,8 @@ public class Order
             System.Console.WriteLine("No active order to complete.");
             return;
         }
-        System.Console.WriteLine($"Order completed: {_tshirt.FullDescription}");
+        System.Console.WriteLine($"Order completed: {_tshirt.Description}");
+        SalesTracker.Instance.AddSale(_tshirt.Size);
         _tshirt = null;
     }
 
@@ -38,6 +40,6 @@ public class Order
         if(_tshirt is null)
             System.Console.WriteLine("No active order.");
         else
-            System.Console.WriteLine($"Current order: {_tshirt.FullDescription}");
+            System.Console.WriteLine($"Current order: {_tshirt.Description}");
     }
 }
