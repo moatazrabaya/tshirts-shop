@@ -11,7 +11,7 @@ public abstract class TShirtDecorator : TShirt
         _tshirt = tshirt;
     }
 
-    public abstract override string FullDescription {get;}
+    public abstract override string Description {get;}
 
     public override void FormSize() => _tshirt.FormSize();
 }
