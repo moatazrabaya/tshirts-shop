@@ -8,5 +8,5 @@ public class RedColorDecorator : TShirtDecorator
     {
 
     }
-    public override string FullDescription => $"{_tshirt.FullDescription} + Red Color";
+    public override string Description => $"{_tshirt.Description} + Red Color";
 }

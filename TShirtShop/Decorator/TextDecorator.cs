@@ -8,5 +8,5 @@ public class TextDecorator : TShirtDecorator
     {
 
     }
-    public override string FullDescription => $"{_tshirt.FullDescription} + \"Nice Day!\"";
+    public override string Description => $"{_tshirt.Description} + \"Nice Day!\"";
 }

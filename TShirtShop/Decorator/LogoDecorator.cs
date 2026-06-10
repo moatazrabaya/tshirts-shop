@@ -8,5 +8,5 @@ public class LogoDecorator : TShirtDecorator
     {
 
     }
-    public override string FullDescription => $"{_tshirt.FullDescription} + Bird Logo";
+    public override string Description => $"{_tshirt.Description} + Bird Logo";
 }
