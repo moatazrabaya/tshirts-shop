@@ -1,3 +1,5 @@
+using TShirtShop.Enums;
+
 namespace TShirtShop.Models;
 
 public class AsiaSmallTShirt : TShirt
@@ -5,8 +7,8 @@ public class AsiaSmallTShirt : TShirt
     public AsiaSmallTShirt()
     {
         Name = "Asia Small T-Shirt";
-        Size = "Small";
-        Region = "Asia";
+        Size = TShirtSize.Small;
+        Region = TShirtRegion.Asia;
     }
 
     public override void FormSize()

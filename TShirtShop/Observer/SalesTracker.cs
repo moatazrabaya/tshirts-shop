@@ -1,3 +1,6 @@
+using TShirtShop.Enums;
+using TShirtShop.Models;
+
 namespace TShirtShop.Observer;
 
 public class SalesTracker : ISubject
@@ -30,13 +33,13 @@ public class SalesTracker : ISubject
             observer.Update(_smallSold, _mediumSold, _largeSold);
     }
 
-    public void AddSale(string size)
+    public void AddSale(TShirtSize size)
     {
-        switch (size.ToLower())
+        switch (size)
         {
-            case "small": _smallSold++; break;
-            case "medium": _mediumSold++; break;
-            case "large": _largeSold++; break;
+            case TShirtSize.Small: _smallSold++; break;
+            case TShirtSize.Medium: _mediumSold++; break;
+            case TShirtSize.Large: _largeSold++; break;
         }
         NotifyObservers();
     }
